@@ -1,6 +1,8 @@
 from django.shortcuts import render
 from django.http import HttpResponseRedirect
 from tempapps.forms import QuestionForm
+# 글쓰기
+from tempapps.boardWrite import BoardWriteForm
 
 '''
     views에 함수 정의시에
@@ -71,3 +73,13 @@ def formCreate(request):
 
 def thanks(request):
     return render(request, 'thanks.html')
+
+# 글쓰기
+def boardWrite(request):
+    if request.method == 'POST':
+        form = BoardWriteForm(request.POST)
+        return render(request, 'index.html')
+    else:
+        form = BoardWriteForm()
+        
+    return render(request, 'boardWrite.html', {'form':form})
