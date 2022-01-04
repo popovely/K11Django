@@ -39,6 +39,9 @@ ALLOWED_HOSTS = ['localhost', '127.0.0.1']
 
 [형식]
     앱의이름.apps.설정클래스명
+
+앱1 : 설문관리 앱
+앱2 : 템플릿 문법 앱
 '''
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -47,7 +50,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'livepolls.apps.LivepollsConfig' # 추가한 앱 등록
+    'livepolls.apps.LivepollsConfig', # 추가한 앱 등록1
+    'tempapps.apps.TempappsConfig',   # 추가한 앱 등록2
 ]
 
 MIDDLEWARE = [
@@ -125,7 +129,11 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
-
+'''
+장고 프레임워크에서는 CSS, JS, 이미지와 같은 정적 파일들은
+static폴더에 저장하도록 규정되어있다.
+개발자가 임의로 images와 같은 폴더를 생성해도 접근불가함.
+'''
 STATIC_URL = 'static/'
 
 # Default primary key field type
