@@ -1,0 +1,33 @@
+<!-- ⑭
+[next] book_list.html, book_detail.html과 같은 방법으로 아래의 파일들 생성
+    ProjectRoot\books\templates\books\author_list.html
+    ProjectRoot\books\templates\books\author_detail.html
+    ProjectRoot\books\templates\books\publisher_list.html
+    ProjectRoot\books\templates\books\publisher_detail.html -->
+{% extends 'base_books.html' %}
+<!-- 
+
+ -->
+{% block content %}
+    <h2>{{ object.title }}</h2>
+    <ul>
+        <li>
+            Authors :
+            <!-- 
+                저자의 경우 공저(공동저자)의 개념이 있어서
+                하나의 책을 여러명의 저자가 공동집필하는 경우가 있다.
+                따라서 아래는 object에 연결된 authors 모두를 가져와서 출력하겠다는 의미이다.
+             -->
+            {% for author in object.authors.all %}
+                {{ author }}
+                <!-- 
+                    저자를 출력할 때 마지막 값이 아닌 경우에만 콤마(,)를 출력한다.
+                    ; 마지막 저자이름의 뒤에는 콤마를 출력하지 않는다.
+                 -->
+                {% if not forloop.last %}, {% else %}{% endif %}
+            {% endfor %}
+        </li>
+        <li>Publisher : {{ object.publisher }}</li>
+        <li>Publication date : {{ object.publication_date }}</li>
+    </ul>
+{% endblock content %}

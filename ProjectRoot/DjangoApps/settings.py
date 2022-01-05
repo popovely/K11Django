@@ -1,3 +1,13 @@
+''' ① 앱 생성 및 등록
+
+    1. cmd창에서 앱 생성
+        C:\02Workspaces\K77Django> cd ProjectRoot 
+        C:\02Workspaces\K77Django\ProjectRoot> python manage.py startapp books
+        
+    2. 현재파일에서 앱 등록
+
+[next] ProjectRoot\books\models.py '''
+
 """
 Django settings for DjangoApps project.
 
@@ -40,8 +50,9 @@ ALLOWED_HOSTS = ['localhost', '127.0.0.1']
 [형식]
     앱의이름.apps.설정클래스명
 
-앱1 : 설문관리 앱
-앱2 : 템플릿 문법 앱
+ ⇀ 앱1 : 설문관리 앱
+ ⇀ 앱2 : 템플릿 문법 앱
+ ⇀ 앱3 : 도서관리 앱
 '''
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -52,6 +63,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'livepolls.apps.LivepollsConfig', # 추가한 앱 등록1
     'tempapps.apps.TempappsConfig',   # 추가한 앱 등록2
+    'books.apps.BooksConfig',  # 추가한 앱 등록3
 ]
 
 MIDDLEWARE = [

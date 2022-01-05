@@ -1,3 +1,5 @@
+''' ⑤ 새로만든 앱의 path를 등록
+[next] ProjectRoot\livepolls\templates\livepolls\main.html '''
 from django.contrib import admin
 from django.urls import path
 # 외부에 있는 urls.py를 인클루드 하기위한 임포트
@@ -31,6 +33,7 @@ urlpatterns = [
     # 방법2 : 2개의 파일에 작성
     path('livepolls/', include('livepolls.urls')), # 앱1 : 설문관리 앱
     path('tempapps/', include('tempapps.urls')),   # 앱2 : 템플릿 문법 앱
+    path('books/', include('books.urls')),         # 앱3 : 도서관리 앱
 ]
 '''
     방법1의 경우 Url패턴이 변경되면 모든 항목을 수정해야 하므로 불편하다.
