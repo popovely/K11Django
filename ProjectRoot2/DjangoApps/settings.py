@@ -24,6 +24,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-9y$@*cjy_tam1d3t=064e1veeymd3%l$%$pe%v2n09w#47snl$'
 
 # SECURITY WARNING: don't run with debug turned on in production!
+''' 개발용임을 표시. 배포시에는 False로 변경해야함. '''
 DEBUG = True
 
 ''' 개발용이므로 localhost로 등록. 배포시에는 실 서버의 IP주소 혹은 도메인 입력해야함 '''
