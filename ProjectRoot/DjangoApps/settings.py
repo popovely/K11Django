@@ -6,7 +6,7 @@
         
     2. 현재파일에서 앱 등록
 
-[next] ProjectRoot\books\models.py '''
+[next] ProjectRoot/books/models.py '''
 
 """
 Django settings for DjangoApps project.

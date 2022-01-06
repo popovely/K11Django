@@ -1,5 +1,5 @@
 ''' ⑤ 새로만든 앱의 path를 등록
-[next] ProjectRoot\livepolls\templates\livepolls\main.html '''
+[next] ProjectRoot/livepolls/templates/livepolls/main.html '''
 from django.contrib import admin
 from django.urls import path
 # 외부에 있는 urls.py를 인클루드 하기위한 임포트

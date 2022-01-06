@@ -1,5 +1,5 @@
 ''' ⑦ 도서관리 애플리케이션의 URLConf를 추가한다.
-[next] ProjectRoot\books\views.py '''
+[next] ProjectRoot/books/views.py '''
 from django.urls import path
 from . import views
 

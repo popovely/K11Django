@@ -1,9 +1,9 @@
 ''' ⑧ 클래스형 제네릭뷰 중에 TemplateView를 사용하여 템플릿으로 전달할 데이터 저장
-[next] ProjectRoot\books\templates\books\index.html '''
+[next] ProjectRoot/books/templates/books/index.html '''
 
 ''' ⑫ 제네릭뷰 중 ListView를 사용하여 리스트 구현
      & 제네릭 뷰 중 DetailView를 사용하여 상세페이지 구현
-[next] ProjectRoot\books\templates\books\book_list.html '''
+[next] ProjectRoot/books/templates/books/book_list.html '''
 import django
 from django.db import models
 from django.shortcuts import render

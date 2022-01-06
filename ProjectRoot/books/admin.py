@@ -12,4 +12,4 @@ admin.site.register(Publisher)
     C:\ProjectRoot> python manage.py makemigrations  ⇒ 데이터베이스에 변경이 필요한 사항을 추출
     C:\ProjectRoot> python manage.py migrate         ⇒ 데이터베이스에 변경사항을 반영함
     
-[next] ProjectRoot\DjangoApps\urls.py '''
+[next] ProjectRoot/DjangoApps/urls.py '''
